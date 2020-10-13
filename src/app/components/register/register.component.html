@@ -1,0 +1,39 @@
+<div class="container blue lighten-5" id="container">
+    <h1 class="blue-text">Sign up For Free</h1>
+    <div class="row">
+        <form class="col s12" [formGroup]="registerForm" (ngSubmit)="addUser()">
+          <div class="row">
+            <div class="input-field col s6">
+              <input id="first_name" type="text" class="validate" formControlName="firstName">
+              <label for="first_name" class="blue-text">First Name</label>
+            </div>
+            <div class="input-field col s6">
+              <input id="last_name" type="text" class="validate" formControlName="name">
+              <label for="last_name" class="blue-text">Last Name</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+                <input id="username" type="text" class="validate" formControlName="username">
+                <label for="username" class="blue-text">Username</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="email" type="email" class="validate" formControlName="email">
+              <label for="email" class="blue-text">Email</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="password" type="password" class="validate" formControlName="password">
+              <label for="password" class="blue-text">Password</label>
+            </div>
+          </div>
+
+          <button class="btn waves-effect waves-light blue" type="submit" name="action" [disabled]="!registerForm.valid">Submit
+            <i class="material-icons right">send</i>
+          </button>
+        </form>
+      </div>
+</div>
