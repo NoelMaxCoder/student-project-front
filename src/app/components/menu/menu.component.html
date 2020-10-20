@@ -1,0 +1,28 @@
+<nav class="light-blue darken-4">
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">
+        <i class="material-icons left">school</i>
+          Student Project
+      </a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li *ngIf="!isLoggedIn">
+            <a routerLink="user-login">
+                <i class="material-icons left">account_circle</i> 
+                Se Connecter
+            </a>
+        </li>
+        <li *ngIf="!isLoggedIn">
+            <a routerLink="user-register">
+                <i class="material-icons left">account_box</i>
+                S'inscrire
+            </a>
+        </li>
+        <li *ngIf="isLoggedIn">
+            <a (click)="onLogout()">
+                <i class="material-icons left">exit_to_app</i>
+                Se Déconnecter
+            </a>
+        </li>
+      </ul>
+    </div>
+  </nav>

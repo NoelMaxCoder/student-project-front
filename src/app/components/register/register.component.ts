@@ -36,10 +36,12 @@ export class RegisterComponent implements OnInit {
 
   addUser() {
     if(this.registerForm.valid){
-      this.registerService.createUser(this.registerForm.value).subscribe(data => {
-        console.log(data)
-      })
-      alert('Registration Completed successfully !');
+      this.registerService.createUser(this.registerForm.value)
+      .subscribe(data => 
+      {
+        console.log(data);
+        alert('Registration Completed successfully !');
+      }); 
     } 
   }
 
