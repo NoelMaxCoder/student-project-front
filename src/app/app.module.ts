@@ -8,13 +8,19 @@ import { AppComponent } from './app.component';
 import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
 import { MenuComponent } from './components/menu/menu.component';
+import { ClasseComponent } from './components/classe/classe.component';
+import { AddClasseComponent } from './components/add-classe/add-classe.component';
+import { AddStudentComponent } from './components/add-student/add-student.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegisterComponent,
     LoginComponent,
-    MenuComponent
+    MenuComponent,
+    ClasseComponent,
+    AddClasseComponent,
+    AddStudentComponent
   ],
   imports: [
     BrowserModule,

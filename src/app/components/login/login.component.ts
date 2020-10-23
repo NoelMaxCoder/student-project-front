@@ -37,7 +37,7 @@ export class LoginComponent implements OnInit {
         data => {
           this.session.addTokenInStorage(data);
           alert('User has been logged in successfully !');
-          this.router.navigateByUrl('**');
+          this.router.navigateByUrl('/classe-list');
         },
         error => {
           console.log(error);

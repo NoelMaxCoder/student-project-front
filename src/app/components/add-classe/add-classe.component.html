@@ -1,0 +1,16 @@
+<div class="container blue lighten-5" id="container">
+    <h1 class="blue-text">Ajouter une Classe</h1>
+    <div class="row">
+        <form class="col s12" [formGroup]="classeForm" (ngSubmit)="addClasse()">
+          <div class="row">
+            <div class="input-field col s12">
+                <input id="labelClasse" type="text" class="validate" formControlName="labelClasse">
+                <label for="labelClasse" class="blue-text">Nom de la classe</label>
+            </div>
+          </div>
+          <button class="btn waves-effect waves-light blue" type="submit" name="action" [disabled]="!classeForm.valid">Ajouter
+            <i class="material-icons right">send</i>
+          </button>
+        </form>
+      </div>
+</div>

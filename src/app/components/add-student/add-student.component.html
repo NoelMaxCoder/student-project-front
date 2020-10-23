@@ -1,0 +1,30 @@
+<div class="container blue lighten-5" id="container">
+    <h1>Ajouter un étudiant</h1>
+    <form class="col s12" [formGroup]="studentForm" (ngSubmit)="addStudent()">
+        <div class="row">
+          <div class="input-field col s6">
+            <input id="firstName" type="text" class="validate" formControlName="firstName">
+            <label for="firstName">Prénom</label>
+          </div>
+          <div class="input-field col s6">
+            <input id="name" type="text" class="validate" formControlName="name">
+            <label for="name">Nom</label>
+          </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s6">
+                <input id="course" type="text" class="validate" formControlName="course">
+                <label for="course">Cours</label>
+            </div>
+            <div class="input-field col s6">
+                <select class="browser-default" formControlName="selectClasse">
+                    <option value="" disabled selected>Choose your class</option>
+                    <option *ngFor="let classe of classes" [value]="classe.id">{{classe.labelClasse}}</option>
+                </select>
+            </div>
+        </div>
+        <button class="btn waves-effect waves-light blue" type="submit" [disabled]="!studentForm.valid">Ajouter
+            <i class="material-icons right">send</i>
+        </button>
+    </form>
+</div>

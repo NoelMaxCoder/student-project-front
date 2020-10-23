@@ -1,0 +1,21 @@
+<div class="container">
+    <h1 class="blue-text">Gestion des classes</h1>
+    <div class="preloader-wrapper big active" *ngIf="isLoading">
+        <div class="spinner-layer spinner-blue-only">
+          <div class="circle-clipper left">
+            <div class="circle"></div>
+          </div><div class="gap-patch">
+            <div class="circle"></div>
+          </div><div class="circle-clipper right">
+            <div class="circle"></div>
+          </div>
+        </div>
+    </div>
+    <ul class="collapsible expandable" data-collapsible="expandable" materialize="collapsible">
+        <li *ngFor="let classe of classes">
+          <div class="collapsible-header"><i class="material-icons">school</i>{{classe.labelClasse}}</div>
+          <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+        </li>
+    </ul>
+</div>
+
