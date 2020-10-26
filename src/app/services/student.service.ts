@@ -16,4 +16,8 @@ export class StudentService {
   public createStudent(student: studentModel, id: number): Observable<studentModel> {
     return this.httpClient.post<studentModel>(this.BaseUrl + 'student/create/classe/' + id, JSON.stringify(student));
   }
+
+  public deleteStudent(id: number):Observable<studentModel>{
+    return this.httpClient.delete<studentModel>(this.BaseUrl + 'student/delete/' + id);
+  }
 }

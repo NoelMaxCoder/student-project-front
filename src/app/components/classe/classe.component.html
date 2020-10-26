@@ -14,7 +14,31 @@
     <ul class="collapsible expandable" data-collapsible="expandable" materialize="collapsible">
         <li *ngFor="let classe of classes">
           <div class="collapsible-header"><i class="material-icons">school</i>{{classe.labelClasse}}</div>
-          <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+          <div class="collapsible-body">
+            <table class="striped centered">
+              <thead>
+                <tr>
+                    <th>Prénom</th>
+                    <th>Nom</th>
+                    <th>Cursus</th>
+                    <th>Actions</th>
+                </tr>
+              </thead>
+      
+              <tbody>
+                <tr *ngFor="let student of classe.students">
+                  <td>{{student.firstName}}</td>
+                  <td>{{student.name}}</td>
+                  <td>{{student.course}}</td>
+                  <td>
+                    <button class="btn waves-effect waves-light red" type="button" (click)="removeStudent(student.id)">
+                      <i class="material-icons">delete</i>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </li>
     </ul>
 </div>
